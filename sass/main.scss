@@ -1,37 +1,15 @@
-/* 
-COLORS: 
-Light blue #C4DDFF
-Medium blue #7FB5FF
-Dark blue #001D6E*/
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$color-primary: #7fb5ff;
-$color-primary-dark: #001d6e;
-$color-primary-light: #c4ddff;
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-$color-grey-dark: #777;
-$color-white: #fff;
+@import "components/button";
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%; /* 10px divided 16px equals 62.5% */
-}
-
-body {
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box;
-}
+@import "pages/home";
 
 .header {
   height: 95vh;
@@ -80,104 +58,5 @@ body {
     letter-spacing: 0.8rem;
 
     animation: moveInRight 1s ease-in;
-  }
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    opacity: 100%;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-1rem);
-  }
-
-  100% {
-    opacity: 100%;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  100% {
-    opacity: 100%;
-    transform: translate(0);
-  }
-}
-
-.btn {
-  &:link,
-  &:visited {
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 1.5rem 4rem;
-    border-radius: 10rem;
-    transition: all 0.2s;
-    position: relative;
-  }
-
-  &--white {
-    background-color: #fff;
-    color: #777;
-  }
-
-  &:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-
-    &::after {
-      transform: scaleX(1.1) scaleY(1.4);
-      opacity: 0;
-    }
-  }
-
-  &:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  }
-
-  &::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    display: inline-block;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s;
-  }
-
-  &--white::after {
-    background-color: #fff;
-  }
-
-  &--animated {
-    animation: moveInBottom 0.5s ease-in-out 0.3s;
-    animation-fill-mode: backwards;
   }
 }
