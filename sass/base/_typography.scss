@@ -12,7 +12,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
-  &-primary--main {
+  &--main {
     display: block;
     font-size: 7.5rem;
     font-weight: 400;
@@ -20,7 +20,7 @@ body {
 
     animation: moveInLeft 1s ease-in;
   }
-  &-primary--sub {
+  &--sub {
     display: block;
     font-size: 1.85rem;
     font-weight: 400;

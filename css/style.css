@@ -53,13 +53,13 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem; }
-  .heading-primary-primary--main {
+  .heading-primary--main {
     display: block;
     font-size: 7.5rem;
     font-weight: 400;
     letter-spacing: 1.6rem;
     animation: moveInLeft 1s ease-in; }
-  .heading-primary-primary--sub {
+  .heading-primary--sub {
     display: block;
     font-size: 1.85rem;
     font-weight: 400;
@@ -163,6 +163,32 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #7fb5ff;
+      transform: scale(1.05) translateY(0.5rem);
+      box-shadow: 0 0.25rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 .row {
   width: 114rem;
