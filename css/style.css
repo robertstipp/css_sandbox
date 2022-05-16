@@ -165,13 +165,12 @@ body {
   transform: translateY(0); }
 
 .card {
-  height: 50rem;
+  height: 52rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative; }
   .card__side {
-    color: #fff;
-    height: 50rem;
+    height: 52rem;
     font-size: 2rem;
     background-color: orangered;
     position: absolute;
@@ -187,20 +186,49 @@ body {
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #c4ddff, #001d6e); }
+        background-image: linear-gradient(to right bottom, #f52100, #b51800); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
   .card__picture {
     background-size: cover;
-    height: 23rem; }
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
     .card__picture--1 {
-      background-image: url(../img/jet-1.jpg); }
+      background-image: linear-gradient(to right bottom, #f52100, #b51800), url(../img/jet-1.jpg); }
     .card__picture--2 {
       background-image: url(../img/space-2.jpg); }
     .card__picture--3 {
       background-image: url(../img/computer-1.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(245, 33, 0, 0.85), rgba(181, 24, 0, 0.85)); }
+  .card__details {
+    padding: 2rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.7rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #777; }
 
 .composition {
   position: relative; }

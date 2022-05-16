@@ -1,13 +1,12 @@
 .card {
   // FUNCTIONALITY
-  height: 50rem;
+  height: 52rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
 
   &__side {
-    color: #fff;
-    height: 50rem;
+    height: 52rem;
     font-size: 2rem;
     background-color: orangered;
     position: absolute;
@@ -29,8 +28,8 @@
       &-1 {
         background-image: linear-gradient(
           to right bottom,
-          $color-primary-light,
-          $color-primary-dark
+          $color-secondary-light,
+          $color-secondary-dark
         );
       }
     }
@@ -47,9 +46,16 @@
   &__picture {
     background-size: cover;
     height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
     &--1 {
-      background-image: url(../img/jet-1.jpg);
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/jet-1.jpg);
     }
 
     &--2 {
@@ -57,6 +63,47 @@
     }
     &--3 {
       background-image: url(../img/computer-1.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 2rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        font-size: 1.7rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-dark;
+        }
+      }
     }
   }
 }
