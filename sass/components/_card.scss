@@ -1,4 +1,5 @@
 .card {
+  // FUNCTIONALITY
   height: 50rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -35,10 +36,27 @@
     }
   }
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
     transform: rotateY(0deg);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+
+    &--1 {
+      background-image: url(../img/jet-1.jpg);
+    }
+
+    &--2 {
+      background-image: url(../img/space-2.jpg);
+    }
+    &--3 {
+      background-image: url(../img/computer-1.jpg);
+    }
   }
 }
