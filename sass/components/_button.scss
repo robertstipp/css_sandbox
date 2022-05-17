@@ -10,11 +10,6 @@
     position: relative;
   }
 
-  &--white {
-    background-color: #fff;
-    color: #777;
-  }
-
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -43,8 +38,22 @@
     transition: all 0.4s;
   }
 
-  &--white::after {
+  &--white {
     background-color: #fff;
+    color: #777;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  &--blue {
+    background-color: $color-primary;
+    color: #fff;
+
+    &::after {
+      background-color: #fff;
+    }
   }
 
   &--animated {
