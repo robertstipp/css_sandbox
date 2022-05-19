@@ -17,13 +17,37 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
   }
 
   &__img {
     height: 100%;
+    transition: all 0.5s ease;
+    transform: translateX(-0.5rem);
   }
 
   &__text {
     transform: skewX(12deg);
+  }
+
+  &__caption {
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  &:hover &__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    filter: brightness(50%) grayscale(20%);
   }
 }
