@@ -546,17 +546,19 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#c4ddff, #001d6e);
+  background-image: radial-gradient(#c4ddff, #7fb5ff);
   z-index: 1000;
-  transform: scale(90); }
+  transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
 .navigation__nav {
   height: 100vh;
-  width: 100vw;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1500; }
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
 .navigation__list {
   position: absolute;
@@ -588,6 +590,13 @@ body {
   color: #001d6e;
   background-position: 100%;
   transform: translate(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100vw; }
 
 .section-about {
   background-color: #f7f7f7;
