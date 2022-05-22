@@ -13,6 +13,15 @@
     border-radius: 50%;
     z-index: 2000;
     text-align: center;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -26,6 +35,15 @@
     z-index: 1000;
     transition: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     // transform: scale(90);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
